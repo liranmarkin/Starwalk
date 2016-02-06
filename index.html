@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background: #032c51;
+            margin: 0;
+            color: #e0fbfd;
+            /*overflow: hidden;*/
+        }
+        canvas.hidden {
+        	display: none;
+        }
+        canvas.displayed {
+        	display: block;
+        }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" class="hidden"></canvas>
+    <div id="lobby">
+    	<h1>
+    		Starwalk
+    	</h1>
+
+    	<button id="button_play_online">
+    		Join online game
+    	</button>
+    	<button id="button_play_local">
+    		Player local multiplyer
+    	</button>
+    </div>
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script type="text/javascript" src="levels.js"></script>
+    <script src="iohandler.js"></script>
+    <script src="app.js"></script>
+    <script src="lobby.js"></script>
+  </body>
+</html>
