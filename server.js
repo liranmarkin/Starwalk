@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var http = require('http').Server(app);
+var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 
 var levels = [{
@@ -173,6 +173,6 @@ io.on('connection', function(socket){
 	});
 });
 
-http.listen(app.get('port') ,app.get('ip'), function () {
-    console.log("listening at %s:%d ", app.get('ip'),app.get('port'));
+http.listen(app.get('port'), function () {
+    console.log("listening on port %d ", app.get('port'));
 });
